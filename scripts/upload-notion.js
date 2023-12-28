@@ -92,7 +92,7 @@ function pathToUrl(filePath) {
     for (const chunk of chunksOf10) {
         console.log(`Uploading chunk of ${chunk.length} files... ${JSON.stringify(chunk.map(f => f.path))}`);
         try {
-            const result = await fetch('http://0.0.0.0:3000/dev/train', {
+            const result = await fetch('http://0.0.0.0:3001/dev/train', {
                 method: 'POST',
                 body: JSON.stringify({
                     files: chunk,
